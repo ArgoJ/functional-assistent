@@ -1,0 +1,177 @@
+[
+    {
+        "user_content": "Wie ist der aktuelle Aktienkurs von Google?",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "aktueller Aktienkurs Google"
+        }
+    },
+    {
+        "user_content": "Erkläre den Unterschied zwischen REST und GraphQL.",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "Unterschied zwischen REST und GraphQL erklären"
+        }
+    },
+    {
+        "user_content": "Finde die Dokumentation für die 'requests'-Bibliothek in Python.",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "requests Bibliothek Dokumentation Python"
+        }
+    },
+    {
+        "user_content": "Wie ist die Wettervorhersage für den Firmenausflug auf Bali?",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "Wettervorhersage Bali Firmenausflug"
+        }
+    },
+    {
+        "user_content": "Wer hat letztes Jahr die World Series gewonnen?",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "MLB World Series Gewinner letztes Jahr"
+        }
+    },
+    {
+        "user_content": "Vergleich der Preise von AWS und GCP.",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "AWS vs GCP Preisvergleich"
+        }
+    },
+    {
+        "user_content": "Wann sind die Termine der kommenden bundesweiten Feiertage?",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "Termine kommende bundesweite Feiertage"
+        }
+    },
+    {
+        "user_content": "Was ist die neueste Version von Node.js?",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "neueste Node.js Version"
+        }
+    },
+    {
+        "user_content": "Was hat unser Konkurrent ABC Corp heute auf der CES angekündigt?",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "ABC Corp Ankündigungen CES heute"
+        }
+    },
+    {
+        "user_content": "Wandle 100 USD in JPY um.",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "100 USD in JPY umrechnen"
+        }
+    },
+    {
+        "user_content": "Wie ist die Syntax für List Comprehensions in Python?",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "Python List Comprehension Syntax Beispiele"
+        }
+    },
+    {
+        "user_content": "Prüfe den aktuellen Aktienkurs von Apple.",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "aktueller Aktienkurs Apple"
+        }
+    },
+    {
+        "user_content": "Zeige mir Beispiele für die Verwendung des useEffect-Hooks in React.",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "useEffect Hook React Beispiele"
+        }
+    },
+    {
+        "user_content": "Wie liste ich offene Ports auf einem Linux-Server auf?",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "Linux Befehl offene Ports anzeigen"
+        }
+    },
+    {
+        "user_content": "Vergleiche die Funktionen von iPhone 15 und Samsung S24.",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "iPhone 15 vs Samsung S24 Funktionsvergleich"
+        }
+    },
+    {
+        "user_content": "Best Practices für das Schreiben eines Dockerfile für eine Node.js-Anwendung.",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "Dockerfile Best Practices Node.js Anwendung"
+        }
+    },
+    {
+        "user_content": "Was ist der Unterschied zwischen VLOOKUP und XLOOKUP in Google Sheets?",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "VLOOKUP vs XLOOKUP Google Sheets Unterschied"
+        }
+    },
+    {
+        "user_content": "Was sind die neuesten Release Notes für die OpenAI-API?",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "OpenAI API neueste Release Notes"
+        }
+    },
+    {
+        "user_content": "Wie mache ich den letzten Git-Commit rückgängig, behalte aber die Änderungen?",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "git reset --soft letzten Commit rückgängig machen"
+        }
+    },
+    {
+        "user_content": "Tutorial zu SQL-Window-Funktionen.",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "Tutorial SQL Window Funktionen"
+        }
+    },
+    {
+        "user_content": "Wer ist der CEO von Tesla?",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "CEO von Tesla"
+        }
+    },
+    {
+        "user_content": "Rezept für Lasagne.",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "Rezept Lasagne"
+        }
+    },
+    {
+        "user_content": "Wie bindet man eine Krawatte?",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "wie bindet man eine Krawatte"
+        }
+    },
+    {
+        "user_content": "Entfernung von der Erde zum Mars.",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "Entfernung Erde zu Mars"
+        }
+    },
+    {
+        "user_content": "Neueste Nachrichten zu KI.",
+        "tool_name": "search_web",
+        "tool_arguments": {
+            "query": "neueste Nachrichten KI"
+        }
+    }
+]

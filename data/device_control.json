@@ -1,0 +1,214 @@
+[
+    {
+        "user_content": "Schalte die Lichter im Wohnzimmer ein.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Lichter",
+            "location": "Wohnzimmer",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Schalte die Heizung in der Küche ein.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Heizung",
+            "location": "Küche",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Kannst du den Ventilator einschalten?",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Ventilator",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Schalte den Fernseher im Schlafzimmer ein.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Fernseher",
+            "location": "Schlafzimmer",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Aktiviere das Sicherheitssystem.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Sicherheitssystem",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Bitte schalte die Kaffeemaschine in der Küche ein.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Kaffeemaschine",
+            "location": "Küche",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Schalte das Licht in der Garage ein.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Licht",
+            "location": "Garage",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Aktiviere die Klimaanlage im Büro.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Klimaanlage",
+            "location": "Büro",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Schalte die Lampe ein.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Lampe",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Ich brauche, dass der Luftentfeuchter im Keller läuft.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Luftentfeuchter",
+            "location": "Keller",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Schalte die Flurlichter ein.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Lichter",
+            "location": "Flur",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Starte die Geschirrspülmaschine.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Geschirrspüler",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Schalte das Licht auf der Veranda ein.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Verandalicht",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Schalte den Ventilator im Schlafzimmer ein.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Ventilator",
+            "location": "Schlafzimmer",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Aktiviere den Saugroboter.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Saugroboter",
+            "action": "on"
+        }
+    },
+    {
+        "user_content": "Schalte die Lichter im Wohnzimmer aus.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Lichter",
+            "location": "Wohnzimmer",
+            "action": "off"
+        }
+    },
+    {
+        "user_content": "Bitte schalte die Heizung in der Küche aus.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Heizung",
+            "location": "Küche",
+            "action": "off"
+        }
+    },
+    {
+        "user_content": "Schalte den Fernseher aus.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Fernseher",
+            "action": "off"
+        }
+    },
+    {
+        "user_content": "Deaktiviere das Sicherheitssystem.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Sicherheitssystem",
+            "action": "off"
+        }
+    },
+    {
+        "user_content": "Schalte die Lampe im Büro aus.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Lampe",
+            "location": "Büro",
+            "action": "off"
+        }
+    },
+    {
+        "user_content": "Dimme die Wohnzimmerlampen auf 50%.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Lampen",
+            "location": "Wohnzimmer",
+            "action": "dimm",
+            "percentage": 50
+        }
+    },
+    {
+        "user_content": "Dimme die Schlafzimmerlichter auf 25%.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Lichter",
+            "location": "Schlafzimmer",
+            "action": "dimm",
+            "percentage": 25
+        }
+    },
+    {
+        "user_content": "Stelle die Esszimmerbeleuchtung auf 75% ein.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Esszimmerlicht",
+            "location": "Esszimmer",
+            "action": "dimm",
+            "percentage": 75
+        }
+    },
+    {
+        "user_content": "Dimme das Verandalicht auf 10%.",
+        "tool_name": "device_control",
+        "tool_arguments": {
+            "device_name": "Verandalicht",
+            "location": "Veranda",
+            "action": "dimm",
+            "percentage": 10
+        }
+    }
+]

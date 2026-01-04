@@ -3,21 +3,22 @@
         "user_content": "Spiele etwas Rockmusik.",
         "tool_name": "play_music",
         "tool_arguments": {
-            "genre": "rock"
+            "genre": "Rock"
         }
     },
     {
-        "user_content": "Ich möchte Taylor Swift hören.",
+        "user_content": "Ich möchte Ariana Grande hören.",
         "tool_name": "play_music",
         "tool_arguments": {
-            "artist": "Taylor Swift"
+            "artist": "Ariana Grande"
         }
     },
     {
-        "user_content": "Spiele das Album Thriller.",
+        "user_content": "Spiele das Album Thriller von Michael Jackson.",
         "tool_name": "play_music",
         "tool_arguments": {
-            "album": "Thriller"
+            "album": "Thriller",
+            "artist": "Michael Jackson"
         }
     },
     {
@@ -59,7 +60,7 @@
         "user_content": "Spiele klassische Musik.",
         "tool_name": "play_music",
         "tool_arguments": {
-            "genre": "classical"
+            "genre": "Klassische Musik"
         }
     },
     {
@@ -73,7 +74,7 @@
         "user_content": "Spiele etwas Popmusik.",
         "tool_name": "play_music",
         "tool_arguments": {
-            "genre": "pop"
+            "genre": "Pop"
         }
     },
     {
@@ -84,7 +85,7 @@
         }
     },
     {
-        "user_content": "Spiele das Album 'Abbey Road'.",
+        "user_content": "Spiele das Album Abbey Road.",
         "tool_name": "play_music",
         "tool_arguments": {
             "album": "Abbey Road"
@@ -101,11 +102,11 @@
         "user_content": "Spiele Hip-Hop.",
         "tool_name": "play_music",
         "tool_arguments": {
-            "genre": "hip hop"
+            "genre": "Hip-Hop"
         }
     },
     {
-        "user_content": "Spiele Shake It Off von Taylor Swift.",
+        "user_content": "Spiele das Lied Shake It Off von Taylor Swift.",
         "tool_name": "play_music",
         "tool_arguments": {
             "artist": "Taylor Swift",
@@ -113,19 +114,19 @@
         }
     },
     {
-        "user_content": "Spiele Blank Space von Taylor Swift.",
+        "user_content": "Spiele Be Someone von Benson Boone.",
         "tool_name": "play_music",
         "tool_arguments": {
-            "artist": "Taylor Swift",
-            "song": "Blank Space"
+            "artist": "Benson Boone",
+            "song": "Be Someone"
         }
     },
     {
-        "user_content": "Spiele Love Story von Taylor Swift.",
+        "user_content": "Mach das Lied Ashes von Illenium an.",
         "tool_name": "play_music",
         "tool_arguments": {
-            "artist": "Taylor Swift",
-            "song": "Love Story"
+            "artist": "Illenium",
+            "song": "Ashes"
         }
     }
 ]

@@ -7,22 +7,15 @@ def search_web(query: str) -> str:
     """
     return "Public Result"
 
-def openai_api_call(prompt: str) -> str:
+def device_control(device_name: str, location: str = "", action: str = "on", **kwargs) -> str:
     """
-    Call OpenAI API.
-
-    Args:
-        prompt: prompt string
-    """
-    return "OpenAI Result"
-
-def turn_on_device(device_name: str, location: str = "") -> str:
-    """
-    Turn on a smart home device.
+    Control a smart home device with specified action.
 
     Args:
         device_name: The name of the device (e.g., "light", "heater").
         location: The location of the device (e.g., "living room").
+        action: The action to perform (e.g., "on", "off", "dimm").
+        **kwargs: Additional arguments for the device.
     """
     return f"Turned on {device_name} in {location}"
 
@@ -44,17 +37,6 @@ def create_timer(duration: str) -> str:
         duration: The duration of the timer (e.g., "5 minutes").
     """
     return f"Timer set for {duration}"
-
-def send_email(recipient: str, subject: str, body: str) -> str:
-    """
-    Send an email.
-
-    Args:
-        recipient: The email address of the recipient.
-        subject: The subject of the email.
-        body: The content of the email.
-    """
-    return f"Email sent to {recipient}"
 
 def create_alarm(time: str, label: str = "") -> str:
     """

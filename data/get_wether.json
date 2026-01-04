@@ -4,7 +4,7 @@
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "New York",
-            "date": "tomorrow"
+            "date": "morgen"
         }
     },
     {
@@ -12,7 +12,7 @@
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "London",
-            "date": "Friday"
+            "date": "Freitag"
         }
     },
     {
@@ -20,14 +20,14 @@
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Paris",
-            "date": "next week"
+            "date": "nächste Woche"
         }
     },
     {
         "user_content": "Wetterbericht für Tokio, 2024-05-01.",
         "tool_name": "get_weather",
         "tool_arguments": {
-            "location": "Tokyo",
+            "location": "Tokio",
             "date": "2024-05-01"
         }
     },
@@ -36,7 +36,7 @@
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Berlin",
-            "date": "now"
+            "date": "jetzt"
         }
     },
     {
@@ -44,7 +44,7 @@
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "San Francisco",
-            "date": "today"
+            "date": "heute"
         }
     },
     {
@@ -52,7 +52,7 @@
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Sydney",
-            "date": "Christmas"
+            "date": "Weihnachten"
         }
     },
     {
@@ -60,7 +60,7 @@
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Mumbai",
-            "date": "this weekend"
+            "date": "dieses Wochenende"
         }
     },
     {
@@ -68,7 +68,7 @@
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Toronto",
-            "date": "Monday"
+            "date": "Montag"
         }
     },
     {
@@ -76,7 +76,7 @@
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Dubai",
-            "date": "12th August"
+            "date": "12. August"
         }
     },
     {
@@ -84,23 +84,23 @@
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Seattle",
-            "date": "today"
+            "date": "heute"
         }
     },
     {
         "user_content": "Wetter in Rom am nächsten Freitag.",
         "tool_name": "get_weather",
         "tool_arguments": {
-            "location": "Rome",
-            "date": "next Friday"
+            "location": "Rom",
+            "date": "nächsten Freitag"
         }
     },
     {
         "user_content": "Temperatur in Moskau.",
         "tool_name": "get_weather",
         "tool_arguments": {
-            "location": "Moscow",
-            "date": "now"
+            "location": "Moskau",
+            "date": "jetzt"
         }
     },
     {
@@ -108,7 +108,7 @@
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Madrid",
-            "date": "tomorrow"
+            "date": "morgen"
         }
     },
     {
@@ -116,7 +116,15 @@
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Chicago",
-            "date": "tonight"
+            "date": "heute Abend"
+        }
+    },
+    {
+        "user_content": "Wie ist das Wetter heute abend",
+        "tool_name": "get_weather",
+        "tool_arguments": {
+            "location": "hier",
+            "date": "heute Abend"
         }
     }
 ]

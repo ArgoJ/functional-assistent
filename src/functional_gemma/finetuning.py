@@ -15,7 +15,7 @@ from checker import check_success_rate
 
 
 base_model = "google/functiongemma-270m-it"
-learning_rate = 5e-4
+learning_rate = 5e-5
 
 
 TOOLS = [get_json_schema(tool) for _, tool in tools.__dict__.items() if callable(tool)]
