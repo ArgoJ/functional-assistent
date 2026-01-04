@@ -15,7 +15,7 @@ def device_control(device_name: str, location: str = "", action: str = "on", **k
         device_name: The name of the device (e.g., "light", "heater").
         location: The location of the device (e.g., "living room").
         action: The action to perform (e.g., "on", "off", "dimm").
-        **kwargs: Additional arguments for the device.
+        kwargs: Additional arguments for the device (e.g., "percentage" for dimming).
     """
     return f"Turned on {device_name} in {location}"
 
