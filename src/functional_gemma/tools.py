@@ -1,3 +1,5 @@
+from typing import Any
+
 def search_web(query: str) -> str:
     """
     Search public information.
@@ -7,7 +9,7 @@ def search_web(query: str) -> str:
     """
     return "Public Result"
 
-def device_control(device_name: str, location: str = "", action: str = "on", **kwargs) -> str:
+def device_control(device_name: str, location: str = "", action: str = "on", **kwargs: Any) -> str:
     """
     Control a smart home device with specified action.
 
