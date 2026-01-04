@@ -18,7 +18,7 @@ base_model = "google/functiongemma-270m-it"
 learning_rate = 5e-5
 
 
-TOOLS = [get_json_schema(tool) for _, tool in tools.__dict__.items() if callable(tool)]
+TOOLS = [get_json_schema(tool) for name, tool in tools.__dict__.items() if callable(tool) and getattr(tool, "__module__", "") == tools.__name__]
 DEFAULT_SYSTEM_MSG = "Du bist ein hilfreicher Assistent, der Funktionsaufrufe mit den folgenden Funktionen durchführen kann. Antworte immer auf Deutsch."
 
 def create_conversation(sample, tool_names=None):
