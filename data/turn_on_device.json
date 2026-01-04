@@ -1,0 +1,116 @@
+[
+    {
+        "user_content": "Schalte die Lichter im Wohnzimmer ein.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "lights",
+            "location": "living room"
+        }
+    },
+    {
+        "user_content": "Schalte die Heizung in der Küche ein.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "heater",
+            "location": "kitchen"
+        }
+    },
+    {
+        "user_content": "Kannst du den Ventilator einschalten?",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "fan"
+        }
+    },
+    {
+        "user_content": "Schalte den Fernseher im Schlafzimmer ein.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "TV",
+            "location": "bedroom"
+        }
+    },
+    {
+        "user_content": "Aktiviere das Sicherheitssystem.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "security system"
+        }
+    },
+    {
+        "user_content": "Bitte schalte die Kaffeemaschine in der Küche ein.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "coffee maker",
+            "location": "kitchen"
+        }
+    },
+    {
+        "user_content": "Schalte das Licht in der Garage ein.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "lights",
+            "location": "garage"
+        }
+    },
+    {
+        "user_content": "Schalte die Klimaanlage im Büro ein.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "air conditioner",
+            "location": "office"
+        }
+    },
+    {
+        "user_content": "Schalte die Lampe ein.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "lamp"
+        }
+    },
+    {
+        "user_content": "Ich brauche, dass der Luftentfeuchter im Keller läuft.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "dehumidifier",
+            "location": "basement"
+        }
+    },
+    {
+        "user_content": "Schalte die Flurlichter ein.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "lights",
+            "location": "hallway"
+        }
+    },
+    {
+        "user_content": "Starte die Geschirrspülmaschine.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "dishwasher"
+        }
+    },
+    {
+        "user_content": "Schalte das Licht auf der Veranda ein.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "porch light"
+        }
+    },
+    {
+        "user_content": "Schalte den Ventilator im Schlafzimmer ein.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "fan",
+            "location": "bedroom"
+        }
+    },
+    {
+        "user_content": "Aktiviere den Saugroboter.",
+        "tool_name": "turn_on_device",
+        "tool_arguments": {
+            "device_name": "robot vacuum"
+        }
+    }
+]
