@@ -14,17 +14,10 @@
         }
     },
     {
-        "user_content": "Finde die Dokumentation für die 'requests'-Bibliothek in Python.",
+        "user_content": "Finde die Dokumentation für die requests-Bibliothek in Python.",
         "tool_name": "search_web",
         "tool_arguments": {
             "query": "requests Bibliothek Dokumentation Python"
-        }
-    },
-    {
-        "user_content": "Wie ist die Wettervorhersage für den Firmenausflug auf Bali?",
-        "tool_name": "search_web",
-        "tool_arguments": {
-            "query": "Wettervorhersage Bali Firmenausflug"
         }
     },
     {
@@ -147,10 +140,10 @@
         }
     },
     {
-        "user_content": "Rezept für Lasagne.",
+        "user_content": "Rezept für vegane Lasagne.",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "Rezept Lasagne"
+            "query": "Rezept vegane Lasagne"
         }
     },
     {

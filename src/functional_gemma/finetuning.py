@@ -19,20 +19,41 @@ learning_rate = 5e-5
 
 
 TOOLS = [get_json_schema(tool) for name, tool in tools.__dict__.items() if callable(tool) and getattr(tool, "__module__", "") == tools.__name__]
-DEFAULT_SYSTEM_MSG = "Du bist ein Sprachassistent, der ausschließlich Funktionsaufrufe mit den folgenden Funktionen durchführen kann."
+DEFAULT_SYSTEM_MSG = (
+    "Du bist ein hilfreicher Assistent mit Zugriff auf spezifische Werkzeuge.\n",
+    "1. Prüfe zuerst, ob eine spezifische Funktion (wie Wetter, Musik, Alarm) die Anfrage lösen kann.\n",
+    "2. Wenn keine spezifische Funktion passt, nutze die Websuche ('search_web'), um Informationen zu finden.\n",
+    "3. Nutze nur dann reinen Text, wenn gar keine Funktion passt (z.B. bei Begrüßungen). Antworte immer im validen Funktionsaufruf-Format oder auf Deutsch.\n")
 
 def create_conversation(sample, tool_names=None):
-    tool_name = sample["tool_name"]
+    tool_name = sample.get("tool_name")
+    
     if tool_names and isinstance(tool_name, int):
         tool_name = tool_names[tool_name]
+
+    if tool_name and tool_name != "null":
+        assistant_message = {
+            "role": "assistant",
+            "tool_calls": [{
+                "type": "function", 
+                "function": {
+                    "name": tool_name, 
+                    "arguments": sample["tool_arguments"]
+                }
+            }]
+        }
+    else:
+        response_text = sample.get("response", "Ich kann dir dabei leider nicht helfen.")
+        assistant_message = {
+            "role": "assistant",
+            "content": response_text
+        }
+
     return {
         "messages": [
             {"role": "developer", "content": DEFAULT_SYSTEM_MSG},
             {"role": "user", "content": sample["user_content"]},
-            {"role": "assistant", 
-                "tool_calls": [{
-                    "type": "function", 
-                    "function": {"name": tool_name, "arguments": sample["tool_arguments"]}}]},
+            assistant_message,
         ],
         "tools": TOOLS
     }
