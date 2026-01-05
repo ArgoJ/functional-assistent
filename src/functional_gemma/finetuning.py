@@ -19,9 +19,9 @@ learning_rate = 5e-5
 
 TOOLS = [get_json_schema(tool) for name, tool in tools.__dict__.items() if callable(tool) and getattr(tool, "__module__", "") == tools.__name__]
 DEFAULT_SYSTEM_MSG = (
-    "Du bist ein hilfreicher Assistent mit Zugriff auf spezifische Werkzeuge.\n",
-    "1. Prüfe zuerst, ob eine spezifische Funktion (wie Wetter, Musik, Alarm) die Anfrage lösen kann.\n",
-    "2. Wenn keine spezifische Funktion passt, nutze die Websuche ('search_web'), um Informationen zu finden.\n",
+    "Du bist ein hilfreicher Assistent mit Zugriff auf spezifische Werkzeuge.\n"
+    "1. Prüfe zuerst, ob eine spezifische Funktion (wie Wetter, Musik, Alarm) die Anfrage lösen kann.\n"
+    "2. Wenn keine spezifische Funktion passt, nutze die Websuche ('search_web'), um Informationen zu finden.\n"
     "3. Nutze nur dann reinen Text, wenn gar keine Funktion passt (z.B. bei Begrüßungen). Antworte immer im validen Funktionsaufruf-Format oder auf Deutsch.\n")
 
 def create_conversation(sample, tool_names=None):
@@ -63,6 +63,11 @@ loaded_json = []
 for file_path in glob.glob(os.path.abspath("data/*.json")):
     with open(file_path, "r") as f:
         loaded_json.extend(json.load(f))
+
+# Ensure tool_name is never None for ClassLabel and sorting
+for item in loaded_json:
+    if item["tool_name"] is None:
+        item["tool_name"] = "null"
 
 dataset = Dataset.from_list(loaded_json)
 
