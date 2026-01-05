@@ -14,18 +14,19 @@ def check_success_rate(dataset, model, tokenizer, TOOLS):
         print(f"{idx+1} Prompt: {item['messages'][1]['content']}")
         print(f"  Output: {output}")
 
-        expected_tool = item['messages'][2]['tool_calls'][0]['function']['name']
-        other_tool = "search_knowledge_base" if expected_tool == "search_google" else "search_google"
-
-        if expected_tool in output and other_tool not in output:
-            print("  `-> ✅ correct!")
-            success_count += 1
-        elif expected_tool not in output:
-            print(f"  -> ❌ wrong (expected '{expected_tool}' missing)")
-        else:
-            if output.startswith(f"<start_function_call>call:{expected_tool}"):
-                print(f"  -> ⚠️ tool is correct {expected_tool}, but other_tool exists in output")
+        assistant_msg = item['messages'][2]
+        if 'tool_calls' in assistant_msg and assistant_msg['tool_calls']:
+            expected_tool = assistant_msg['tool_calls'][0]['function']['name']
+            if f"call:{expected_tool}" in output:
+                print(f"  `-> ✅ correct tool call: {expected_tool}")
+                success_count += 1
             else:
-                print(f"  -> ❌ wrong (hallucinated '{other_tool}')")
+                print(f"  -> ❌ wrong (expected tool '{expected_tool}' missing or incorrect)")
+        else:
+            if "<start_function_call>" not in output:
+                print("  `-> ✅ correct text response")
+                success_count += 1
+            else:
+                print("  -> ❌ wrong (hallucinated a tool call when text was expected)")
 
     print(f"Success rate: {success_count} / {len(dataset)}")
