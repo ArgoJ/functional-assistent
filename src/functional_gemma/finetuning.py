@@ -1,3 +1,4 @@
+# %%
 import json
 import glob
 import os
@@ -12,11 +13,9 @@ from transformers.utils import get_json_schema
 import tools
 from checker import check_success_rate
 
-
-
+# %% 
 base_model = "google/functiongemma-270m-it"
 learning_rate = 5e-5
-
 
 TOOLS = [get_json_schema(tool) for name, tool in tools.__dict__.items() if callable(tool) and getattr(tool, "__module__", "") == tools.__name__]
 DEFAULT_SYSTEM_MSG = (
@@ -58,7 +57,7 @@ def create_conversation(sample, tool_names=None):
         "tools": TOOLS
     }
 
-
+# %%
 # Prepare dataset
 loaded_json = []
 for file_path in glob.glob(os.path.abspath("data/*.json")):
@@ -81,7 +80,7 @@ dataset = dataset.train_test_split(test_size=0.2, shuffle=True, stratify_by_colu
 dataset["train"] = dataset["train"].remove_columns(original_columns)
 dataset["test"] = dataset["test"].remove_columns(original_columns)
 
-
+# %%
 # Load model and tokenizer 
 login(token=os.getenv("HF_TOKEN"))
 
@@ -96,10 +95,11 @@ tokenizer = AutoTokenizer.from_pretrained(base_model)
 print(f"Device: {model.device}")
 print(f"DType: {model.dtype}")
 
+# %%
 print("\n--- Initial check before training ---")
 check_success_rate(dataset["test"], model, tokenizer, TOOLS)
 
-
+# %%
 # Define training arguments
 torch_dtype = model.dtype
 args = SFTConfig(
@@ -121,7 +121,7 @@ args = SFTConfig(
     report_to="tensorboard",                 # report metrics to tensorboard
 )
 
-
+# %%
 # Create Trainer object
 trainer = SFTTrainer(
     model=model,
@@ -134,8 +134,6 @@ trainer = SFTTrainer(
 # Start training, the model will be automatically saved to the Hub and the output directory
 trainer.train()
 
+# %%
 print("\n--- Check after training ---")
 check_success_rate(dataset["test"], model, tokenizer, TOOLS)
-
-# Save the final model again to the Hugging Face Hub
-# trainer.save_model()
