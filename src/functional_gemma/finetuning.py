@@ -19,20 +19,23 @@ learning_rate = 5e-5
 
 
 TOOLS = [get_json_schema(tool) for name, tool in tools.__dict__.items() if callable(tool) and getattr(tool, "__module__", "") == tools.__name__]
-DEFAULT_SYSTEM_MSG = "Du bist ein hilfreicher Assistent, der Funktionsaufrufe mit den folgenden Funktionen durchführen kann. Antworte immer auf Deutsch."
+DEFAULT_SYSTEM_MSG = "Du bist ein Sprachassistent, der ausschließlich Funktionsaufrufe mit den folgenden Funktionen durchführen kann."
 
 def create_conversation(sample, tool_names=None):
-  tool_name = sample["tool_name"]
-  if tool_names and isinstance(tool_name, int):
-      tool_name = tool_names[tool_name]
-  return {
-      "messages": [
-          {"role": "developer", "content": DEFAULT_SYSTEM_MSG},
-          {"role": "user", "content": sample["user_content"]},
-          {"role": "assistant", "tool_calls": [{"type": "function", "function": {"name": tool_name, "arguments": sample["tool_arguments"]}}]},
-      ],
-      "tools": TOOLS
-  }
+    tool_name = sample["tool_name"]
+    if tool_names and isinstance(tool_name, int):
+        tool_name = tool_names[tool_name]
+    return {
+        "messages": [
+            {"role": "developer", "content": DEFAULT_SYSTEM_MSG},
+            {"role": "user", "content": sample["user_content"]},
+            {"role": "assistant", 
+                "tool_calls": [{
+                    "type": "function", 
+                    "function": {"name": tool_name, "arguments": sample["tool_arguments"]}}]},
+        ],
+        "tools": TOOLS
+    }
 
 
 # Prepare dataset
