@@ -1,170 +1,170 @@
 [
     {
-        "user_content": "Wie ist der aktuelle Aktienkurs von Google?",
+        "user_content": "What is the current stock price of Google?",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "aktueller Aktienkurs Google"
+            "query": "current stock price Google"
         }
     },
     {
-        "user_content": "Erkläre den Unterschied zwischen REST und GraphQL.",
+        "user_content": "Explain the difference between REST and GraphQL.",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "Unterschied zwischen REST und GraphQL erklären"
+            "query": "explain difference between REST and GraphQL"
         }
     },
     {
-        "user_content": "Finde die Dokumentation für die requests-Bibliothek in Python.",
+        "user_content": "Find the documentation for the requests library in Python.",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "requests Bibliothek Dokumentation Python"
+            "query": "requests library documentation Python"
         }
     },
     {
-        "user_content": "Wer hat letztes Jahr die World Series gewonnen?",
+        "user_content": "Who won the World Series last year?",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "MLB World Series Gewinner letztes Jahr"
+            "query": "MLB World Series winner last year"
         }
     },
     {
-        "user_content": "Vergleich der Preise von AWS und GCP.",
+        "user_content": "Comparison of AWS and GCP prices.",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "AWS vs GCP Preisvergleich"
+            "query": "AWS vs GCP price comparison"
         }
     },
     {
-        "user_content": "Wann sind die Termine der kommenden bundesweiten Feiertage?",
+        "user_content": "When are the dates of the upcoming federal holidays?",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "Termine kommende bundesweite Feiertage"
+            "query": "dates upcoming federal holidays"
         }
     },
     {
-        "user_content": "Was ist die neueste Version von Node.js?",
+        "user_content": "What is the latest version of Node.js?",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "neueste Node.js Version"
+            "query": "latest Node.js version"
         }
     },
     {
-        "user_content": "Was hat unser Konkurrent ABC Corp heute auf der CES angekündigt?",
+        "user_content": "What did our competitor ABC Corp announce at CES today?",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "ABC Corp Ankündigungen CES heute"
+            "query": "ABC Corp announcements CES today"
         }
     },
     {
-        "user_content": "Wandle 100 USD in JPY um.",
+        "user_content": "Convert 100 USD to JPY.",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "100 USD in JPY umrechnen"
+            "query": "convert 100 USD to JPY"
         }
     },
     {
-        "user_content": "Wie ist die Syntax für List Comprehensions in Python?",
+        "user_content": "What is the syntax for list comprehensions in Python?",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "Python List Comprehension Syntax Beispiele"
+            "query": "Python list comprehension syntax examples"
         }
     },
     {
-        "user_content": "Prüfe den aktuellen Aktienkurs von Apple.",
+        "user_content": "Check the current stock price of Apple.",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "aktueller Aktienkurs Apple"
+            "query": "current stock price Apple"
         }
     },
     {
-        "user_content": "Zeige mir Beispiele für die Verwendung des useEffect-Hooks in React.",
+        "user_content": "Show me examples of using the useEffect hook in React.",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "useEffect Hook React Beispiele"
+            "query": "useEffect hook React examples"
         }
     },
     {
-        "user_content": "Wie liste ich offene Ports auf einem Linux-Server auf?",
+        "user_content": "How do I list open ports on a Linux server?",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "Linux Befehl offene Ports anzeigen"
+            "query": "Linux command show open ports"
         }
     },
     {
-        "user_content": "Vergleiche die Funktionen von iPhone 15 und Samsung S24.",
+        "user_content": "Compare the features of iPhone 15 and Samsung S24.",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "iPhone 15 vs Samsung S24 Funktionsvergleich"
+            "query": "iPhone 15 vs Samsung S24 feature comparison"
         }
     },
     {
-        "user_content": "Best Practices für das Schreiben eines Dockerfile für eine Node.js-Anwendung.",
+        "user_content": "Best practices for writing a Dockerfile for a Node.js application.",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "Dockerfile Best Practices Node.js Anwendung"
+            "query": "Dockerfile best practices Node.js application"
         }
     },
     {
-        "user_content": "Was ist der Unterschied zwischen VLOOKUP und XLOOKUP in Google Sheets?",
+        "user_content": "What is the difference between VLOOKUP and XLOOKUP in Google Sheets?",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "VLOOKUP vs XLOOKUP Google Sheets Unterschied"
+            "query": "VLOOKUP vs XLOOKUP Google Sheets difference"
         }
     },
     {
-        "user_content": "Was sind die neuesten Release Notes für die OpenAI-API?",
+        "user_content": "What are the latest release notes for the OpenAI API?",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "OpenAI API neueste Release Notes"
+            "query": "OpenAI API latest release notes"
         }
     },
     {
-        "user_content": "Wie mache ich den letzten Git-Commit rückgängig, behalte aber die Änderungen?",
+        "user_content": "How do I undo the last git commit but keep the changes?",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "git reset --soft letzten Commit rückgängig machen"
+            "query": "git reset --soft undo last commit"
         }
     },
     {
-        "user_content": "Tutorial zu SQL-Window-Funktionen.",
+        "user_content": "Tutorial on SQL window functions.",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "Tutorial SQL Window Funktionen"
+            "query": "Tutorial SQL window functions"
         }
     },
     {
-        "user_content": "Wer ist der CEO von Tesla?",
+        "user_content": "Who is the CEO of Tesla?",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "CEO von Tesla"
+            "query": "CEO of Tesla"
         }
     },
     {
-        "user_content": "Rezept für vegane Lasagne.",
+        "user_content": "Recipe for vegan lasagna.",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "Rezept vegane Lasagne"
+            "query": "Recipe vegan lasagna"
         }
     },
     {
-        "user_content": "Wie bindet man eine Krawatte?",
+        "user_content": "How to tie a tie?",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "wie bindet man eine Krawatte"
+            "query": "how to tie a tie"
         }
     },
     {
-        "user_content": "Entfernung von der Erde zum Mars.",
+        "user_content": "Distance from Earth to Mars.",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "Entfernung Erde zu Mars"
+            "query": "Distance Earth to Mars"
         }
     },
     {
-        "user_content": "Neueste Nachrichten zu KI.",
+        "user_content": "Latest news on AI.",
         "tool_name": "search_web",
         "tool_arguments": {
-            "query": "neueste Nachrichten KI"
+            "query": "latest news AI"
         }
     }
 ]

@@ -1,130 +1,130 @@
 [
     {
-        "user_content": "Wie ist das Wetter morgen in New York?",
+        "user_content": "What is the weather in New York tomorrow?",
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "New York",
-            "date": "morgen"
+            "date": "tomorrow"
         }
     },
     {
-        "user_content": "Prüfe die Wettervorhersage für London am Freitag.",
+        "user_content": "Check the weather forecast for London on Friday.",
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "London",
-            "date": "Freitag"
+            "date": "Friday"
         }
     },
     {
-        "user_content": "Wird es nächste Woche in Paris regnen?",
+        "user_content": "Will it rain in Paris next week?",
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Paris",
-            "date": "nächste Woche"
+            "date": "next week"
         }
     },
     {
-        "user_content": "Wetterbericht für Tokio, 2024-05-01.",
+        "user_content": "Weather report for Tokyo, 2024-05-01.",
         "tool_name": "get_weather",
         "tool_arguments": {
-            "location": "Tokio",
+            "location": "Tokyo",
             "date": "2024-05-01"
         }
     },
     {
-        "user_content": "Wie ist das Wetter gerade in Berlin?",
+        "user_content": "What is the weather right now in Berlin?",
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Berlin",
-            "date": "jetzt"
+            "date": "now"
         }
     },
     {
-        "user_content": "Ist es heute sonnig in San Francisco?",
+        "user_content": "Is it sunny in San Francisco today?",
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "San Francisco",
-            "date": "heute"
+            "date": "today"
         }
     },
     {
-        "user_content": "Gib mir das Wetter für Sydney an Weihnachten.",
+        "user_content": "Give me the weather for Sydney on Christmas.",
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Sydney",
-            "date": "Weihnachten"
+            "date": "Christmas"
         }
     },
     {
-        "user_content": "Wettervorhersage für Mumbai dieses Wochenende.",
+        "user_content": "Weather forecast for Mumbai this weekend.",
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Mumbai",
-            "date": "dieses Wochenende"
+            "date": "this weekend"
         }
     },
     {
-        "user_content": "Wie ist die Temperatur in Toronto am Montag?",
+        "user_content": "What is the temperature in Toronto on Monday?",
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Toronto",
-            "date": "Montag"
+            "date": "Monday"
         }
     },
     {
-        "user_content": "Zeige das Wetter für Dubai, 12. August.",
+        "user_content": "Show the weather for Dubai, August 12th.",
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Dubai",
-            "date": "12. August"
+            "date": "August 12th"
         }
     },
     {
-        "user_content": "Regnet es in Seattle?",
+        "user_content": "Is it raining in Seattle?",
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Seattle",
-            "date": "heute"
+            "date": "today"
         }
     },
     {
-        "user_content": "Wetter in Rom am nächsten Freitag.",
+        "user_content": "Weather in Rome next Friday.",
         "tool_name": "get_weather",
         "tool_arguments": {
-            "location": "Rom",
-            "date": "nächsten Freitag"
+            "location": "Rome",
+            "date": "next Friday"
         }
     },
     {
-        "user_content": "Temperatur in Moskau.",
+        "user_content": "Temperature in Moscow.",
         "tool_name": "get_weather",
         "tool_arguments": {
-            "location": "Moskau",
-            "date": "jetzt"
+            "location": "Moscow",
+            "date": "now"
         }
     },
     {
-        "user_content": "Wettervorhersage für morgen in Madrid.",
+        "user_content": "Weather forecast for Madrid tomorrow.",
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Madrid",
-            "date": "morgen"
+            "date": "tomorrow"
         }
     },
     {
-        "user_content": "Prüfe das Wetter in Chicago heute Abend.",
+        "user_content": "Check the weather in Chicago this evening.",
         "tool_name": "get_weather",
         "tool_arguments": {
             "location": "Chicago",
-            "date": "heute Abend"
+            "date": "this evening"
         }
     },
     {
-        "user_content": "Wie ist das Wetter heute abend",
+        "user_content": "What is the weather this evening?",
         "tool_name": "get_weather",
         "tool_arguments": {
-            "location": "hier",
-            "date": "heute Abend"
+            "location": "here",
+            "date": "this evening"
         }
     }
 ]

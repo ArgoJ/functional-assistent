@@ -1,20 +1,20 @@
 [
     {
-        "user_content": "Spiele etwas Rockmusik.",
+        "user_content": "Play some rock music.",
         "tool_name": "play_music",
         "tool_arguments": {
             "genre": "Rock"
         }
     },
     {
-        "user_content": "Ich möchte Ariana Grande hören.",
+        "user_content": "I want to listen to Ariana Grande.",
         "tool_name": "play_music",
         "tool_arguments": {
             "artist": "Ariana Grande"
         }
     },
     {
-        "user_content": "Spiele das Album Thriller von Michael Jackson.",
+        "user_content": "Play the album Thriller by Michael Jackson.",
         "tool_name": "play_music",
         "tool_arguments": {
             "album": "Thriller",
@@ -22,91 +22,91 @@
         }
     },
     {
-        "user_content": "Starte meine Workout-Wiedergabeliste.",
+        "user_content": "Start my workout playlist.",
         "tool_name": "play_music",
         "tool_arguments": {
             "playlist": "Workout"
         }
     },
     {
-        "user_content": "Spiele etwas Jazz.",
+        "user_content": "Play some jazz.",
         "tool_name": "play_music",
         "tool_arguments": {
             "genre": "Jazz"
         }
     },
     {
-        "user_content": "Spiele einige Lieder von The Beatles.",
+        "user_content": "Play some songs by The Beatles.",
         "tool_name": "play_music",
         "tool_arguments": {
             "artist": "The Beatles"
         }
     },
     {
-        "user_content": "Spiele die Wiedergabeliste Top 50 Global.",
+        "user_content": "Play the Top 50 Global playlist.",
         "tool_name": "play_music",
         "tool_arguments": {
             "playlist": "Top 50 Global"
         }
     },
     {
-        "user_content": "Ich möchte das Album Rumours hören.",
+        "user_content": "I want to hear the album Rumours.",
         "tool_name": "play_music",
         "tool_arguments": {
             "album": "Rumours"
         }
     },
     {
-        "user_content": "Spiele klassische Musik.",
+        "user_content": "Play classical music.",
         "tool_name": "play_music",
         "tool_arguments": {
-            "genre": "Klassische Musik"
+            "genre": "Classical music"
         }
     },
     {
-        "user_content": "Spiele Ed Sheeran.",
+        "user_content": "Play Ed Sheeran.",
         "tool_name": "play_music",
         "tool_arguments": {
             "artist": "Ed Sheeran"
         }
     },
     {
-        "user_content": "Spiele etwas Popmusik.",
+        "user_content": "Play some pop music.",
         "tool_name": "play_music",
         "tool_arguments": {
             "genre": "Pop"
         }
     },
     {
-        "user_content": "Ich möchte Queen hören.",
+        "user_content": "I want to listen to Queen.",
         "tool_name": "play_music",
         "tool_arguments": {
             "artist": "Queen"
         }
     },
     {
-        "user_content": "Spiele das Album Abbey Road.",
+        "user_content": "Play the album Abbey Road.",
         "tool_name": "play_music",
         "tool_arguments": {
             "album": "Abbey Road"
         }
     },
     {
-        "user_content": "Starte die Wiedergabeliste Chill Vibes.",
+        "user_content": "Start the Chill Vibes playlist.",
         "tool_name": "play_music",
         "tool_arguments": {
             "playlist": "Chill Vibes"
         }
     },
     {
-        "user_content": "Spiele Hip-Hop.",
+        "user_content": "Play Hip-Hop.",
         "tool_name": "play_music",
         "tool_arguments": {
             "genre": "Hip-Hop"
         }
     },
     {
-        "user_content": "Spiele das Lied Shake It Off von Taylor Swift.",
+        "user_content": "Play the song Shake It Off by Taylor Swift.",
         "tool_name": "play_music",
         "tool_arguments": {
             "artist": "Taylor Swift",
@@ -114,7 +114,7 @@
         }
     },
     {
-        "user_content": "Spiele Be Someone von Benson Boone.",
+        "user_content": "Play Be Someone by Benson Boone.",
         "tool_name": "play_music",
         "tool_arguments": {
             "artist": "Benson Boone",
@@ -122,7 +122,7 @@
         }
     },
     {
-        "user_content": "Mach das Lied Ashes von Illenium an.",
+        "user_content": "Put on the song Ashes by Illenium.",
         "tool_name": "play_music",
         "tool_arguments": {
             "artist": "Illenium",

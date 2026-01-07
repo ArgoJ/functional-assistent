@@ -1,212 +1,212 @@
 [
     {
-        "user_content": "Schalte die Lichter im Wohnzimmer ein.",
+        "user_content": "Turn on the lights in the living room.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Lichter",
-            "location": "Wohnzimmer",
+            "device_name": "Lights",
+            "location": "Living Room",
             "action": "on"
         }
     },
     {
-        "user_content": "Schalte die Heizung in der Küche ein.",
+        "user_content": "Turn on the heater in the kitchen.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Heizung",
-            "location": "Küche",
+            "device_name": "Heater",
+            "location": "Kitchen",
             "action": "on"
         }
     },
     {
-        "user_content": "Kannst du den Ventilator einschalten?",
+        "user_content": "Can you turn on the fan?",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Ventilator",
+            "device_name": "Fan",
             "action": "on"
         }
     },
     {
-        "user_content": "Schalte den Fernseher im Schlafzimmer ein.",
+        "user_content": "Turn on the TV in the bedroom.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Fernseher",
-            "location": "Schlafzimmer",
+            "device_name": "TV",
+            "location": "Bedroom",
             "action": "on"
         }
     },
     {
-        "user_content": "Aktiviere das Sicherheitssystem.",
+        "user_content": "Activate the security system.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Sicherheitssystem",
+            "device_name": "Security system",
             "action": "on"
         }
     },
     {
-        "user_content": "Bitte schalte die Kaffeemaschine in der Küche ein.",
+        "user_content": "Please turn on the coffee machine in the kitchen.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Kaffeemaschine",
-            "location": "Küche",
+            "device_name": "Coffee machine",
+            "location": "Kitchen",
             "action": "on"
         }
     },
     {
-        "user_content": "Schalte das Licht in der Garage ein.",
+        "user_content": "Turn on the light in the garage.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Licht",
+            "device_name": "Light",
             "location": "Garage",
             "action": "on"
         }
     },
     {
-        "user_content": "Aktiviere die Klimaanlage im Büro.",
+        "user_content": "Activate the air conditioner in the office.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Klimaanlage",
-            "location": "Büro",
+            "device_name": "Air conditioner",
+            "location": "Office",
             "action": "on"
         }
     },
     {
-        "user_content": "Schalte die Lampe ein.",
+        "user_content": "Turn on the lamp.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Lampe",
+            "device_name": "Lamp",
             "action": "on"
         }
     },
     {
-        "user_content": "Ich brauche, dass der Luftentfeuchter im Keller läuft.",
+        "user_content": "I need the dehumidifier running in the basement.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Luftentfeuchter",
-            "location": "Keller",
+            "device_name": "Dehumidifier",
+            "location": "Basement",
             "action": "on"
         }
     },
     {
-        "user_content": "Schalte die Flurlichter ein.",
+        "user_content": "Turn on the hallway lights.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Lichter",
-            "location": "Flur",
+            "device_name": "Lights",
+            "location": "Hallway",
             "action": "on"
         }
     },
     {
-        "user_content": "Starte die Geschirrspülmaschine.",
+        "user_content": "Start the dishwasher.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Geschirrspüler",
+            "device_name": "Dishwasher",
             "action": "on"
         }
     },
     {
-        "user_content": "Schalte das Licht auf der Veranda ein.",
+        "user_content": "Turn on the porch light.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Verandalicht",
+            "device_name": "Porch light",
             "action": "on"
         }
     },
     {
-        "user_content": "Schalte den Ventilator im Schlafzimmer ein.",
+        "user_content": "Turn on the fan in the bedroom.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Ventilator",
-            "location": "Schlafzimmer",
+            "device_name": "Fan",
+            "location": "Bedroom",
             "action": "on"
         }
     },
     {
-        "user_content": "Aktiviere den Saugroboter.",
+        "user_content": "Activate the vacuum robot.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Saugroboter",
+            "device_name": "Vacuum robot",
             "action": "on"
         }
     },
     {
-        "user_content": "Schalte die Lichter im Wohnzimmer aus.",
+        "user_content": "Turn off the lights in the living room.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Lichter",
-            "location": "Wohnzimmer",
+            "device_name": "Lights",
+            "location": "Living Room",
             "action": "off"
         }
     },
     {
-        "user_content": "Bitte schalte die Heizung in der Küche aus.",
+        "user_content": "Please turn off the heater in the kitchen.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Heizung",
-            "location": "Küche",
+            "device_name": "Heater",
+            "location": "Kitchen",
             "action": "off"
         }
     },
     {
-        "user_content": "Schalte den Fernseher aus.",
+        "user_content": "Turn off the TV.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Fernseher",
+            "device_name": "TV",
             "action": "off"
         }
     },
     {
-        "user_content": "Deaktiviere das Sicherheitssystem.",
+        "user_content": "Deactivate the security system.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Sicherheitssystem",
+            "device_name": "Security system",
             "action": "off"
         }
     },
     {
-        "user_content": "Schalte die Lampe im Büro aus.",
+        "user_content": "Turn off the lamp in the office.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Lampe",
-            "location": "Büro",
+            "device_name": "Lamp",
+            "location": "Office",
             "action": "off"
         }
     },
     {
-        "user_content": "Dimme die Wohnzimmerlampen auf 50%.",
+        "user_content": "Dim the living room lamps to 50%.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Lampen",
-            "location": "Wohnzimmer",
+            "device_name": "Lamps",
+            "location": "Living Room",
             "action": "dimm",
             "percentage": 50
         }
     },
     {
-        "user_content": "Dimme die Schlafzimmerlichter auf 25%.",
+        "user_content": "Dim the bedroom lights to 25%.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Lichter",
-            "location": "Schlafzimmer",
+            "device_name": "Lights",
+            "location": "Bedroom",
             "action": "dimm",
             "percentage": 25
         }
     },
     {
-        "user_content": "Stelle die Esszimmerbeleuchtung auf 75% ein.",
+        "user_content": "Set the dining room lighting to 75%.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Esszimmerlicht",
-            "location": "Esszimmer",
+            "device_name": "Dining room light",
+            "location": "Dining Room",
             "action": "dimm",
             "percentage": 75
         }
     },
     {
-        "user_content": "Dimme das Verandalicht auf 10%.",
+        "user_content": "Dim the porch light to 10%.",
         "tool_name": "device_control",
         "tool_arguments": {
-            "device_name": "Verandalicht",
-            "location": "Veranda",
+            "device_name": "Porch light",
+            "location": "Porch",
             "action": "dimm",
             "percentage": 10
         }

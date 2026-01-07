@@ -1,4 +1,4 @@
-# %%
+# %% Imports
 import json
 import glob
 import os
@@ -6,23 +6,65 @@ import torch
 
 from huggingface_hub import login
 from trl import SFTConfig, SFTTrainer
+from trl.trainer.sft_trainer import DataCollatorForLanguageModeling
 from datasets import Dataset, ClassLabel
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers.utils import get_json_schema
 
 import tools
 from checker import check_success_rate
+from plot import plot_training_loss
 
-# %% 
+class MyCompletionOnlyDataCollator(DataCollatorForLanguageModeling):
+    def __init__(self, tokenizer, response_template, *args, **kwargs):
+        super().__init__(pad_token_id=tokenizer.pad_token_id, *args, **kwargs)
+        self.response_template_ids = tokenizer.encode(response_template, add_special_tokens=False)
+
+    def torch_call(self, examples):
+        batch = super().torch_call(examples)
+        labels = batch["labels"].clone()
+        
+        for i in range(len(labels)):
+            input_ids = batch["input_ids"][i]
+            start_idx = -1
+            
+            # Suche nach der response_template Sequenz
+            token_len = len(self.response_template_ids)
+            for j in range(len(input_ids) - token_len + 1):
+                if input_ids[j:j+token_len].tolist() == self.response_template_ids:
+                    start_idx = j + token_len
+                    break
+            
+            if start_idx != -1:
+                # Maskiere alles VOR dem Start der Antwort
+                labels[i, :start_idx] = -100
+            else:
+                print(f"WARNUNG: Response Template nicht gefunden in Beispiel {i}!")
+                # Optional: Zeige Tokens an, um zu debuggen
+                # print(tokenizer.decode(input_ids))
+                
+        batch["labels"] = labels
+                
+        return batch
+
+# %% Base Configuration
 base_model = "google/functiongemma-270m-it"
-learning_rate = 5e-5
+learning_rate = 2e-5
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(script_dir, "..", ".."))
+data_path = os.path.join(project_root, "data")
+print(f"Using data from: {data_path}")
+
 
 TOOLS = [get_json_schema(tool) for name, tool in tools.__dict__.items() if callable(tool) and getattr(tool, "__module__", "") == tools.__name__]
 DEFAULT_SYSTEM_MSG = (
-    "Du bist ein hilfreicher Assistent mit Zugriff auf spezifische Werkzeuge.\n"
-    "1. Prüfe zuerst, ob eine spezifische Funktion (wie Wetter, Musik, Alarm) die Anfrage lösen kann.\n"
-    "2. Wenn keine spezifische Funktion passt, nutze die Websuche ('search_web'), um Informationen zu finden.\n"
-    "3. Nutze nur dann reinen Text, wenn gar keine Funktion passt (z.B. bei Begrüßungen). Antworte immer im validen Funktionsaufruf-Format oder auf Deutsch.\n")
+    "You are a helpful assistant. "
+    "Use the provided tools to answer questions. "
+    "If no tool fits, use 'search_web'.")
+# DEFAULT_SYSTEM_MSG = (
+#     "Du bist ein hilfreicher Assistent. "
+#     "Nutze die bereitgestellten Tools, um Fragen zu beantworten. "
+#     "Wenn kein Tool passt, nutze 'search_web'.")
 
 def create_conversation(sample, tool_names=None):
     tool_name = sample.get("tool_name")
@@ -57,10 +99,11 @@ def create_conversation(sample, tool_names=None):
         "tools": TOOLS
     }
 
-# %%
-# Prepare dataset
+# %% Prepare dataset
 loaded_json = []
-for file_path in glob.glob(os.path.abspath("data/*.json")):
+for file_path in glob.glob(os.path.join(data_path, "*.json")):
+    if "negative" in file_path:
+        continue
     with open(file_path, "r") as f:
         loaded_json.extend(json.load(f))
 
@@ -85,33 +128,61 @@ dataset = dataset.train_test_split(test_size=0.2, shuffle=True, stratify_by_colu
 dataset["train"] = dataset["train"].remove_columns(original_columns)
 dataset["test"] = dataset["test"].remove_columns(original_columns)
 
-# %%
-# Load model and tokenizer 
+# %% Load model and tokenizer
 login(token=os.getenv("HF_TOKEN"))
 
+tokenizer = AutoTokenizer.from_pretrained(base_model)
+tokenizer.padding_side = "right" # Wichtig für Gemma
+if tokenizer.pad_token is None:
+    tokenizer.pad_token = tokenizer.eos_token
+
+# Load model
 model = AutoModelForCausalLM.from_pretrained(
     base_model,
     dtype="auto",
     device_map="auto",
     attn_implementation="eager"
 )
-tokenizer = AutoTokenizer.from_pretrained(base_model)
 
+
+#  %% Print debug information
+print("--- Model and Dataset Info ---")
 print(f"Device: {model.device}")
 print(f"DType: {model.dtype}")
+
+# Apply chat template to create a single text column for training
+# This ensures tools are rendered into the prompt string
+def format_chat_template(row):
+    return {
+        "text": tokenizer.apply_chat_template(
+            row["messages"], 
+            tools=row["tools"], 
+            add_generation_prompt=False, 
+            tokenize=False
+        )
+    }
+
+print("Applying chat template to dataset...")
+dataset = dataset.map(format_chat_template)
+
+print("--- dataset input ---")
+print(json.dumps(dataset["train"][0]["messages"], indent=2))
+print("--- Formatted prompt (Training Data) ---")
+print(dataset["train"][0]["text"])
+
 
 # %%
 print("\n--- Initial check before training ---")
 check_success_rate(dataset["test"], model, tokenizer, TOOLS)
 
-# %%
-# Define training arguments
+# %% Define training arguments
 torch_dtype = model.dtype
 args = SFTConfig(
-    output_dir="./functiongemma-tool-calling-sft",              # directory to save and repository id
-    max_length=1024,                         # max sequence length for model and packing of the dataset
+    output_dir="./functiongemma-tool-calling-sft",
+    dataset_text_field="text",              # use formated row 
+    max_length=1024,
     packing=False,                          # Groups multiple samples in the dataset into a single sequence
-    num_train_epochs=64,                     # number of training epochs
+    num_train_epochs=8,                     # number of training epochs
     per_device_train_batch_size=4,          # batch size per device during training
     gradient_checkpointing=False,           # Caching is incompatible with gradient checkpointing
     optim="adamw_torch_fused",              # use fused adamw optimizer
@@ -121,24 +192,33 @@ args = SFTConfig(
     learning_rate=learning_rate,            # learning rate
     fp16=True if torch_dtype == torch.float16 else False,   # use float16 precision
     bf16=True if torch_dtype == torch.bfloat16 else False,  # use bfloat16 precision
-    lr_scheduler_type="constant",            # use constant learning rate scheduler
+    lr_scheduler_type="cosine",            # use constant learning rate scheduler
     push_to_hub=False,                        # push model to hub
     report_to="tensorboard",                 # report metrics to tensorboard
 )
 
-# %%
-# Create Trainer object
+# NEU: Data Collator definieren
+response_template = "<start_of_turn>model"
+data_collator = MyCompletionOnlyDataCollator(
+    tokenizer=tokenizer,
+    response_template=response_template
+)
+
+# %% Train the model
 trainer = SFTTrainer(
     model=model,
     args=args,
     train_dataset=dataset['train'],
     eval_dataset=dataset['test'],
     processing_class=tokenizer,
+    data_collator=data_collator,
 )
 
-# Start training, the model will be automatically saved to the Hub and the output directory
 trainer.train()
 
-# %%
+# %% Plot training loss
+plot_training_loss(trainer)
+
+# %% Final evaluation
 print("\n--- Check after training ---")
 check_success_rate(dataset["test"], model, tokenizer, TOOLS)

@@ -1,112 +1,112 @@
 [
     {
-        "user_content": "Weck mich um 07:00 Uhr morgens.",
+        "user_content": "Wake me up at 07:00 AM.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "07:00",
-            "label": "Aufwachen"
+            "label": "Wake up"
         }
     },
     {
-        "user_content": "Stelle einen Wecker für 17:00 Uhr mit dem Titel Besprechung.",
+        "user_content": "Set an alarm for 5:00 PM titled Meeting.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "17:00",
-            "label": "Besprechung"
+            "label": "Meeting"
         }
     },
     {
-        "user_content": "Wecker für 06:30 Uhr.",
+        "user_content": "Alarm for 06:30 AM.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "06:30"
         }
     },
     {
-        "user_content": "Erinnere mich um 21:00 Uhr daran, meine Medikamente zu nehmen.",
+        "user_content": "Remind me at 9:00 PM to take my medication.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "21:00",
-            "label": "Medikamente nehmen"
+            "label": "Take medication"
         }
     },
     {
-        "user_content": "Erstelle einen Wecker für 12:00 Uhr mit dem Titel Mittagessen.",
+        "user_content": "Create an alarm for 12:00 PM titled Lunch.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "12:00",
-            "label": "Mittagessen"
+            "label": "Lunch"
         }
     },
     {
-        "user_content": "Stelle einen Wecker um 08:00 Uhr für Training.",
+        "user_content": "Set an alarm at 08:00 AM for workout.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "08:00",
-            "label": "Training"
+            "label": "Workout"
         }
     },
     {
-        "user_content": "Ich brauche einen Wecker um 10:45 Uhr.",
+        "user_content": "I need an alarm at 10:45 AM.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "10:45"
         }
     },
     {
-        "user_content": "Stelle einen Timer für 15:00 Uhr mit dem Titel Kinder abholen.",
+        "user_content": "Set a timer for 3:00 PM titled Pick up kids.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "15:00",
-            "label": "Kinder abholen"
+            "label": "Pick up kids"
         }
     },
     {
-        "user_content": "Wecker 06:00 Uhr.",
+        "user_content": "Alarm 6:00 AM.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "06:00"
         }
     },
     {
-        "user_content": "Neuer Wecker: 23:00 Uhr, Schlaf.",
+        "user_content": "New alarm: 11:00 PM, Sleep.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "23:00",
-            "label": "Schlaf"
+            "label": "Sleep"
         }
     },
     {
-        "user_content": "Stelle einen Wecker für 06:00 Uhr morgens.",
+        "user_content": "Set an alarm for 06:00 AM.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "06:00"
         }
     },
     {
-        "user_content": "Wecker für Mitternacht.",
+        "user_content": "Alarm for midnight.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "00:00"
         }
     },
     {
-        "user_content": "Erinnere mich um 14:00 Uhr daran, John anzurufen.",
+        "user_content": "Remind me at 2:00 PM to call John.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "14:00",
-            "label": "John anrufen"
+            "label": "Call John"
         }
     },
     {
-        "user_content": "Erinnere mich um 08:30 Uhr.",
+        "user_content": "Remind me at 08:30 AM.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "08:30"
         }
     },
     {
-        "user_content": "Weck mich um 05:45 Uhr.",
+        "user_content": "Wake me up at 05:45 AM.",
         "tool_name": "create_alarm",
         "tool_arguments": {
             "time": "05:45"
