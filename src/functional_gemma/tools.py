@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Optional
 
 def search_web(query: str) -> str:
     """
@@ -9,7 +9,7 @@ def search_web(query: str) -> str:
     """
     return "Public Result"
 
-def device_control(device_name: str, location: str = "", action: str = "on", **kwargs: Any) -> str:
+def device_control(device_name: str, location: str = "", action: str = "on", percentage: Optional[int] = None) -> str:
     """
     Control a smart home device with specified action.
 
@@ -17,7 +17,7 @@ def device_control(device_name: str, location: str = "", action: str = "on", **k
         device_name: The name of the device (e.g., "light", "heater").
         location: The location of the device (e.g., "living room").
         action: The action to perform (e.g., "on", "off", "dimm").
-        kwargs: Additional arguments for the device (e.g., "percentage" for dimming).
+        percentage: Optional percentage for the action (e.g. for dimming).
     """
     return f"Turned on {device_name} in {location}"
 
@@ -50,7 +50,7 @@ def create_alarm(time: str, label: str = "") -> str:
     """
     return f"Alarm set for {time}"
 
-def play_music(genre: str = "", artist: str = "", album: str = "", playlist: str = "") -> str:
+def play_music(genre: str = "", artist: str = "", album: str = "", playlist: str = "", song: str = "") -> str:
     """
     Play music on Spotify based on genre, artist, album, or playlist.
 
@@ -59,5 +59,6 @@ def play_music(genre: str = "", artist: str = "", album: str = "", playlist: str
         artist: The artist to play.
         album: The album to play.
         playlist: The playlist to play.
+        song: The song title to play.
     """
     return "Playing music on Spotify"

@@ -40,8 +40,6 @@ class MyCompletionOnlyDataCollator(DataCollatorForLanguageModeling):
                 labels[i, :start_idx] = -100
             else:
                 print(f"WARNUNG: Response Template nicht gefunden in Beispiel {i}!")
-                # Optional: Zeige Tokens an, um zu debuggen
-                # print(tokenizer.decode(input_ids))
                 
         batch["labels"] = labels
                 
@@ -56,15 +54,15 @@ data_path = os.path.join(project_root, "data")
 print(f"Using data from: {data_path}")
 
 
-TOOLS = [get_json_schema(tool) for name, tool in tools.__dict__.items() if callable(tool) and getattr(tool, "__module__", "") == tools.__name__]
+TOOLS = [
+    get_json_schema(tool) \
+    for name, tool in tools.__dict__.items() \
+    if callable(tool) and getattr(tool, "__module__", "") == tools.__name__
+]
 DEFAULT_SYSTEM_MSG = (
     "You are a helpful assistant. "
     "Use the provided tools to answer questions. "
     "If no tool fits, use 'search_web'.")
-# DEFAULT_SYSTEM_MSG = (
-#     "Du bist ein hilfreicher Assistent. "
-#     "Nutze die bereitgestellten Tools, um Fragen zu beantworten. "
-#     "Wenn kein Tool passt, nutze 'search_web'.")
 
 def create_conversation(sample, tool_names=None):
     tool_name = sample.get("tool_name")
@@ -95,8 +93,7 @@ def create_conversation(sample, tool_names=None):
             {"role": "developer", "content": DEFAULT_SYSTEM_MSG},
             {"role": "user", "content": sample["user_content"]},
             assistant_message,
-        ],
-        "tools": TOOLS
+        ]
     }
 
 # %% Prepare dataset
@@ -132,7 +129,7 @@ dataset["test"] = dataset["test"].remove_columns(original_columns)
 login(token=os.getenv("HF_TOKEN"))
 
 tokenizer = AutoTokenizer.from_pretrained(base_model)
-tokenizer.padding_side = "right" # Wichtig für Gemma
+tokenizer.padding_side = "right"
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
@@ -156,7 +153,7 @@ def format_chat_template(row):
     return {
         "text": tokenizer.apply_chat_template(
             row["messages"], 
-            tools=row["tools"], 
+            tools=TOOLS,
             add_generation_prompt=False, 
             tokenize=False
         )
@@ -217,7 +214,7 @@ trainer = SFTTrainer(
 trainer.train()
 
 # %% Plot training loss
-plot_training_loss(trainer)
+# plot_training_loss(trainer)
 
 # %% Final evaluation
 print("\n--- Check after training ---")
